@@ -1,9 +1,17 @@
 <?php
-require_once 'Account.php';
-require_once 'car.php';
-require_once 'Payment.php';
-require_once 'Route.php';
+require_once('uberX.php');
+require_once('car.php');
+require_once('uberX.php');
+require_once('uberPool.php');
 
-$car = new car("AMQ123", new Account("Andres Herrera", "AND123"));
-$car->printDataCar();
+$uberX = new uberX("WUOP-IU", new Account("Andres Herrera", "AND123"), "Chevrolet", "Spark");
+$uberX->printDataCar();
+
+//salto de linea
+for ($i = 0; $i < 2; $i++) {
+    echo "<br>";
+}
+
+$uberPool = new uberPool("WUOP-IU", new Account("Andres Herrera", "AND123"), "Chevrolet", "Spark");
+$uberPool->printDataCar();
 ?>
