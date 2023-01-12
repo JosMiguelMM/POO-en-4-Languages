@@ -16,7 +16,22 @@ class car
 
     public function printDataCar()
     {
-        echo "Licencia: $this->license Driver: " . $this->driver->name;
+        echo "
+        Licencia: $this->license 
+        Driver: {$this->driver->name} 
+        Número de pasajeros: $this->passenger
+        
+    ";
+    }
+
+    public function validarpasajeros($passanger)
+    {
+        if($passanger>=4){
+            echo"El numero de pasajeros es correcto";
+            $this->passenger=$passanger;
+        }else{
+            echo"El numero de pasajeros es incorrecto";
+        }
     }
 }
 

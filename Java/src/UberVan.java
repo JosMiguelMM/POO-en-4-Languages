@@ -2,12 +2,23 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class UberVan extends Car {
-    Map<String, ArrayList<String>> typeCarAccepted;
-    ArrayList<String> seatsMaterial; //MATERIAL DE LOS ASIENTOS
+    String typeCarAccepted;
+    String seatsMaterial; //MATERIAL DE LOS ASIENTOS
 
-    public UberVan(String license, Account driver, Map<String, ArrayList<String>> typeCarAccepted, ArrayList<String> seatsMaterial) {
+    Integer passenger;
+    public UberVan(String license, Account driver, String typeCarAccepted, String seatsMaterial) {
         super(license, driver);
         this.typeCarAccepted = typeCarAccepted;
         this.seatsMaterial = seatsMaterial;
+    }
+
+    @Override
+    public void cmabiopa(Integer passenger) {
+        if (passenger<=6){
+            System.out.println("El numero de pasajeros es correcto");
+            this.passenger=passenger;
+        }else if(passenger>7){
+            System.out.println("El numero de pasajeros es incorrecto");
+        }
     }
 }

@@ -7,7 +7,7 @@ public class Car {
     public Car(String license, Account driver) {
         this.license = license;
         this.driver = driver;
-        this.passenger = 3;
+        this.passenger = 4;
     }
 
     //METODO
@@ -24,7 +24,7 @@ public class Car {
         if (passenger<=4){
             System.out.println("El numero de pasajeros es correcto");
             this.passenger=passenger;
-        }else if(passenger>3){
+        }else if(passenger>5){
             System.out.println("El numero de pasajeros es incorrecto");
         }
     }
@@ -32,5 +32,6 @@ public class Car {
     public Integer getPassenger() {
         return passenger;
     }
+
 
 }
